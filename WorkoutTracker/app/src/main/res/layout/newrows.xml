@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/location"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_weight="5"
+            android:layout_gravity="left"
+            android:entries="@array/upperlower" />
+
+        <EditText
+            android:id="@+id/weight1"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:ems="10"
+            android:inputType="numberSigned" />
+
+        <TextView
+            android:id="@+id/OneRep"
+            android:layout_width="115dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="One Rep Max" />
+</LinearLayout>

@@ -1,59 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LiinearParent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
     tools:context=".OneRepMax">
 
-    <TextView
-        android:id="@+id/OneRep"
-        android:layout_width="92dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="620dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
 
-    <Spinner
-        android:id="@+id/location"
-        android:layout_width="101dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="75dp"
-        android:layout_marginBottom="618dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Spinner
+            android:id="@+id/location"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:layout_weight="5"
+            android:entries="@array/upperlower" />
+
+        <EditText
+            android:id="@+id/weight"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:ems="10"
+            android:inputType="numberSigned"
+             />
+
+        <TextView
+            android:id="@+id/OneRep"
+            android:layout_width="115dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="TextView" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:layout_width="168dp"
         android:layout_height="wrap_content"
-        android:onClick="OnClick"
-        android:text="Calculate"
+        android:layout_gravity="center"
+        android:onClick="newLine"
+        android:text="Add Exercise"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.747"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.862" />
+        app:layout_constraintVertical_bias="0.976" />
 
-    <EditText
-        android:id="@+id/weight"
-        android:layout_width="174dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="62dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="478dp"
-        android:ems="10"
-        android:inputType="numberSigned"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toStartOf="@+id/OneRep"
-        app:layout_constraintStart_toEndOf="@+id/location"
-        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="calculate"
+        android:text="Button" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

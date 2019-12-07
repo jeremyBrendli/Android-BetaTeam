@@ -4,5 +4,10 @@
         <item>Upper</item>
         <item>Lower</item>
     </string-array>
+    <string-array name="Exersize">
+        <item>"Preacher Curl"</item>
+        <item>Squat</item>
+        <item>Bench Press</item>
+    </string-array>
 
 </resources>
