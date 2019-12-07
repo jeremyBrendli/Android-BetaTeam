@@ -35,44 +35,40 @@ import java.util.List;
 
 import static android.view.View.generateViewId;
 
-public class OneRepMax extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+public class OneRepMax extends AppCompatActivity{
 
     TextView OneRep;
     EditText Weight;
-    Spinner BodyLocation;
     int spiinnernum = 0;
+    Button Upperbody;
     private LinearLayout parentlinear;
     int i = 0;
+    int newlinecount =0;
     List<EditText> editTextList = new ArrayList<EditText>();
     List<TextView> TextViewList = new ArrayList<TextView>();
-    List<Spinner> Spinnerlist = new ArrayList<Spinner>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one_rep_max);
         parentlinear = findViewById(R.id.LiinearParent);
-
-        BodyLocation = findViewById(R.id.location);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.upperlower, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        BodyLocation.setAdapter(adapter);
-        BodyLocation.setOnItemSelectedListener(this);
-
+        Upperbody = findViewById(R.id.UpperBody);
         Intent intent = getIntent();
         //searches to see if a text box was edited
 
+
     }
-    public void calculate(View view){
-        Log.i("This is the child count", parentlinear.getChildCount()+"");
+    public void calculateUpper(View view){
+        spiinnernum = 1;
         try {
         EditText FirstWeight = findViewById(R.id.weight);
         TextView FirstOneRep = findViewById(R.id.OneRep);
         calculateOneRep(FirstWeight, FirstOneRep);
 
-            for (int i = 0; i < parentlinear.getChildCount() - 3; i++) {
-                EditText weight = editTextList.get(i);
-                TextView MAX = TextViewList.get(i);
+            for (int i = 0; i < parentlinear.getChildCount() - 2; i++) {
+                final EditText weight = editTextList.get(i);
+                final TextView MAX = TextViewList.get(i);
                 calculateOneRep(weight, MAX);
 
             }
@@ -81,23 +77,43 @@ public class OneRepMax extends AppCompatActivity implements AdapterView.OnItemSe
             e.printStackTrace();
         }
     }
+    public void calculateLower(View view){
+        spiinnernum = 2;
+        try {
+            EditText FirstWeight = findViewById(R.id.weight);
+            TextView FirstOneRep = findViewById(R.id.OneRep);
+            calculateOneRep(FirstWeight, FirstOneRep);
+
+            for (int i = 0; i < parentlinear.getChildCount() - 2; i++) {
+                final EditText weight = editTextList.get(i);
+                final TextView MAX = TextViewList.get(i);
+                calculateOneRep(weight, MAX);
+
+            }
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+
     public void newLine(View view){
+        newlinecount++;
+        //if(newlinecount <9) {
+            LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            final View rowView = getLayoutInflater().inflate(R.layout.newrows, null);
+            // Add the new row before the add field button.
+            parentlinear.addView(rowView, parentlinear.getChildCount() - 1);
+            int id = View.generateViewId();
+            rowView.setId(id);
 
-        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        final View rowView = getLayoutInflater().inflate(R.layout.newrows, null);
-        // Add the new row before the add field button.
-        parentlinear.addView(rowView, parentlinear.getChildCount() - 1);
-        int id = View.generateViewId();
-        rowView.setId(id);
+            EditText edittext = (EditText) rowView.findViewById(R.id.weight1);
+            // store object in list
+            editTextList.add(edittext);
+            TextView textView = (TextView) rowView.findViewById((R.id.OneRep));
+            TextViewList.add(textView);
 
-        EditText edittext = (EditText) rowView.findViewById(R.id.weight1);
-        // store object in list
-        editTextList.add(edittext);
-        TextView textView = (TextView) rowView.findViewById((R.id.OneRep));
-        TextViewList.add(textView);
-        Spinner UpperLower = (Spinner) rowView.findViewById(R.id.location);
-        Spinnerlist.add(UpperLower);
-
+        //}
 
     }
     public void calculateOneRep(EditText WeightET,TextView OneRep){
@@ -108,14 +124,16 @@ public class OneRepMax extends AppCompatActivity implements AdapterView.OnItemSe
         try {
             Log.i("I made it" , "ww");
             weight = Double.parseDouble(WeightET.getText().toString());
-            BodyLocation.setOnItemSelectedListener(this);
+           // BodyLocation.setOnItemSelectedListener(this);
+            //upper body
             if(spiinnernum == 1) {
                 max = (weight * 1.1307) + 0.6998;
-                OneRep.setText(String.format("%.2f", max));
+                OneRep.setText(String.format("%.2f", max)+ " Lbs");
             }
+            //lowerbody
             else if(spiinnernum == 2){
                 max = (weight* 1.09703) + 14.2546;
-                OneRep.setText(String.format("%.2f",max));
+                OneRep.setText(String.format("%.2f",max)+ " Lbs");
             }
             else{
                 Toast.makeText(this,"Please Select Upper Or Lower Body",Toast.LENGTH_LONG).show();
@@ -128,45 +146,5 @@ public class OneRepMax extends AppCompatActivity implements AdapterView.OnItemSe
     }
 
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        if(position == 0){
-            spiinnernum = 1;
-            try {
-                for (int i = 0; i < parentlinear.getChildCount() - 3; i++) {
-                    final EditText weight = editTextList.get(i);
-                    TextView MAX = TextViewList.get(i);
-                    calculateOneRep(weight,MAX);
-                }
-            }catch(Exception e) {
-                e.printStackTrace();
-            }
-
-            //calculateOneRep();
-        }
-        else if(position == 1){
-            spiinnernum = 2;
-
-            try {
-                for (int i = 0; i < parentlinear.getChildCount() - 3; i++) {
-                    final EditText weight = editTextList.get(i);
-                    TextView MAX = TextViewList.get(i);
-                    calculateOneRep(weight,MAX);
-                }
-            }catch(Exception e) {
-                e.printStackTrace();
-            }
-            //needs to call something else
-            //calculateOneRep();
-        }
-    }
-
-@Override
-public void onNothingSelected(AdapterView<?> parent) {
-
-   }
-
-
-
-
 }
+

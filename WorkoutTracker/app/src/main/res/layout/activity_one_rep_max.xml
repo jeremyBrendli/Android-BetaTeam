@@ -16,14 +16,6 @@
         android:layout_height="50dp"
         android:orientation="horizontal">
 
-        <Spinner
-            android:id="@+id/location"
-            android:layout_width="80dp"
-            android:layout_height="50dp"
-            android:layout_gravity="left"
-            android:layout_weight="5"
-            android:entries="@array/upperlower" />
-
         <EditText
             android:id="@+id/weight"
             android:layout_width="130dp"
@@ -39,30 +31,44 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="TextView" />
+            android:text="One Rep Max" />
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="168dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:onClick="newLine"
-        android:text="Add Exercise"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.747"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
-
-    <Button
-        android:id="@+id/button2"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="calculate"
-        android:text="Button" />
+        android:layout_height="55dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/UpperBody"
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:onClick="calculateUpper"
+            android:text="Upper Body" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="142dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:onClick="newLine"
+            android:text="Add Exercise"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.747"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.976" />
+
+        <Button
+            android:id="@+id/LowerBody"
+            android:layout_width="122dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:onClick="calculateLower"
+            android:text="Lower Body" />
+    </LinearLayout>
 
 
 </LinearLayout>

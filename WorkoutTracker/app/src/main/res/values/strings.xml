@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">WorkoutTracker</string>
     <string-array name="upperlower">
+        <item>None</item>
         <item>Upper</item>
         <item>Lower</item>
     </string-array>
