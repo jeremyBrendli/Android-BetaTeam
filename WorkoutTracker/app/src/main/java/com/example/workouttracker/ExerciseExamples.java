@@ -45,16 +45,16 @@ public class ExerciseExamples extends AppCompatActivity {
                 //String selectedFromList = (listView.getItemAtPosition(position));
 
 
-                if (id == R.id.OneRep) {
-                    Intent intent = new Intent(getApplicationContext(), OneRepMax.class);
+                if (id == 0) {
+                    Intent intent = new Intent(getApplicationContext(), PreacherCurl.class);
                     startActivity(intent);
                 }
                 if (id == R.id.Exercises) {
                     Intent intent = new Intent(getApplicationContext(), ExerciseExamples.class);
                     startActivity(intent);
                 }
-                if (id == R.id.Journal) {
-                    Intent intent = new Intent(getApplicationContext(), WorkoutJournal.class);
+                if (id == 3) {
+                    Intent intent = new Intent(getApplicationContext(),ExerciseExamples.class);
                     startActivity(intent);
                 }
             }
