@@ -99,11 +99,11 @@ public class OneRepMax extends AppCompatActivity{
 
     public void newLine(View view){
         newlinecount++;
-        //if(newlinecount <9) {
+        if(newlinecount <9) {
             LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             final View rowView = getLayoutInflater().inflate(R.layout.newrows, null);
             // Add the new row before the add field button.
-            parentlinear.addView(rowView, parentlinear.getChildCount() - 1);
+            parentlinear.addView(rowView, parentlinear.getChildCount() - 2);
             int id = View.generateViewId();
             rowView.setId(id);
 
@@ -113,7 +113,7 @@ public class OneRepMax extends AppCompatActivity{
             TextView textView = (TextView) rowView.findViewById((R.id.OneRep));
             TextViewList.add(textView);
 
-        //}
+        }
 
     }
     public void calculateOneRep(EditText WeightET,TextView OneRep){
@@ -126,6 +126,10 @@ public class OneRepMax extends AppCompatActivity{
             weight = Double.parseDouble(WeightET.getText().toString());
            // BodyLocation.setOnItemSelectedListener(this);
             //upper body
+            if(weight == 0){
+                OneRep.setText("0Lbs");
+                return;
+            }
             if(spiinnernum == 1) {
                 max = (weight * 1.1307) + 0.6998;
                 OneRep.setText(String.format("%.2f", max)+ " Lbs");
@@ -142,6 +146,25 @@ public class OneRepMax extends AppCompatActivity{
         }
         catch(Exception e){
             Toast.makeText(this,"You need to add weight",Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void moveScrenes(View view) {
+        if (view.getId() == R.id.OneRep) {
+            Intent intent = new Intent(getApplicationContext(), OneRepMax.class);
+            startActivity(intent);
+
+        }
+        if (view.getId() == R.id.Exercises) {
+
+            Intent intent = new Intent(getApplicationContext(), ExerciseExamples.class);
+            startActivity(intent);
+
+        }
+        if (view.getId() == R.id.Journal) {
+
+            Intent intent = new Intent(getApplicationContext(), WorkoutJournal.class);
+            startActivity(intent);
+
         }
     }
 

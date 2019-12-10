@@ -645,6 +645,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable benchpress
 drawable dumbbell
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -662,6 +663,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable preacher
+drawable squat
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -705,6 +707,7 @@ id always
 id async
 id barrier
 id beginning
+id benchpress
 id blocking
 id bottom
 id button
@@ -745,14 +748,11 @@ id icon
 id icon_group
 id ifRoom
 id image
-id imageView
-id imageView2
 id imageView3
 id imageView4
 id imageView5
 id imageView6
 id imageView7
-id imageView8
 id info
 id invisible
 id italic
@@ -776,6 +776,7 @@ id packed
 id parent
 id parentPanel
 id percent
+id preacher_im
 id progress_circular
 id progress_horizontal
 id radio
@@ -806,6 +807,7 @@ id spacer
 id split_action_bar
 id spread
 id spread_inside
+id squat_im
 id src_atop
 id src_in
 id src_over
@@ -869,10 +871,12 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_bench_press
 layout activity_exercise_examples
 layout activity_main
 layout activity_one_rep_max
 layout activity_preacher_curl
+layout activity_squats
 layout activity_workout_journal
 layout newrows
 layout notification_action

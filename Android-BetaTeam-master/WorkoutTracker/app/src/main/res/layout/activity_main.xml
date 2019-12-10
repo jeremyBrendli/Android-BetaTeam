@@ -6,18 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="411dp"
-        android:layout_height="116dp"
-        android:layout_marginTop="53dp"
-        android:layout_marginEnd="1dp"
-        android:src="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Journal" />
-
     <Button
         android:id="@+id/OneRep"
         android:layout_width="wrap_content"
@@ -33,8 +21,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/Exercises"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/Journal"
@@ -88,21 +78,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="410dp"
-        android:layout_height="111dp"
-        android:src="@color/colorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
         android:id="@+id/imageView5"
         android:layout_width="50dp"
         android:layout_height="504dp"
+        android:layout_marginEnd="6dp"
         android:layout_marginBottom="1dp"
         android:src="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintEnd_toStartOf="@+id/Journal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
@@ -110,8 +93,11 @@
         android:id="@+id/imageView6"
         android:layout_width="50dp"
         android:layout_height="504dp"
+        android:layout_marginStart="1dp"
         android:src="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Exercises"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <ImageView
@@ -122,4 +108,28 @@
         android:src="@drawable/dumbbell"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/Title" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="111dp"
+        android:src="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="411dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="1dp"
+        android:src="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Journal" />
 </androidx.constraintlayout.widget.ConstraintLayout>

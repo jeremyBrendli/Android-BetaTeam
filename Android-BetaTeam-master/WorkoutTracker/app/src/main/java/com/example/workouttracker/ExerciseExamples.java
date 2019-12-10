@@ -43,18 +43,21 @@ public class ExerciseExamples extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Log.i("id", view + " view " + parent + "parent");
                 //String selectedFromList = (listView.getItemAtPosition(position));
+                String text = listView.getItemAtPosition(position).toString();
 
 
-                if (id == R.id.OneRep) {
-                    Intent intent = new Intent(getApplicationContext(), OneRepMax.class);
+                if (text.equals("Preacher Curl")) {
+                    Log.i("I WORK", "I wor");
+
+                    Intent intent = new Intent(getApplicationContext(), PreacherCurl.class);
                     startActivity(intent);
                 }
-                if (id == R.id.Exercises) {
-                    Intent intent = new Intent(getApplicationContext(), ExerciseExamples.class);
+                if (text.equals("Squat")) {
+                    Intent intent = new Intent(getApplicationContext(), Squats.class);
                     startActivity(intent);
                 }
-                if (id == R.id.Journal) {
-                    Intent intent = new Intent(getApplicationContext(), WorkoutJournal.class);
+                if (text.equals("Bench Press")) {
+                    Intent intent = new Intent(getApplicationContext(), BenchPress.class);
                     startActivity(intent);
                 }
             }

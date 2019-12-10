@@ -79,5 +79,26 @@
             android:textStyle="bold" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/Journal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="moveScrenes"
+            android:text="Journal" />
+
+        <Button
+            android:id="@+id/Exercises"
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:onClick="moveScrenes"
+            android:text="Example Exercies" />
+    </LinearLayout>
+
 
 </LinearLayout>
