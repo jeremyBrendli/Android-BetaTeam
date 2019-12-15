@@ -10,5 +10,19 @@
         <item>Squat</item>
         <item>Bench Press</item>
     </string-array>
-
+    <string name="squats">
+        Can be done with a Barbell either in the front squat or back squat position. It is recommended that you try squats with lower
+        weight to get your form down before you increase the weight.
+    </string>
+    <string name="Preacher">
+        -Preacher curls exercise your brachialis which is below your bicep this muscle helps with bending your elbow.\n\n
+        -Preacher curls help force you into negative movement which really helps improve muscle growth as well as strength.\n\n
+        -Preacher curls are a great way to keep you in a good form but are bound by the equipment needed to perform this exercise. Bicep curls can work just as well but it is necessary to keep a good form and avoid cheating while performing them.
+    </string>
+    <string name="Bench">
+        Make sure to always have a spotter when you bench press. This is a dangerous exercise and you can cause serious injury if you are not careful.\n\n
+        You can Bench Press in a wide or narrow grip.\n\n
+        If you want to emphasize involvement of your chest and anterior deltoids, then choose wide grip.\n\n
+        If you want to emphasize involvement of your arms and place less strain on your shoulders, choose a narrow grip.
+    </string>
 </resources>

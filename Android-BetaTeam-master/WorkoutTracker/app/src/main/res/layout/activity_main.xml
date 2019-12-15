@@ -107,7 +107,9 @@
         android:layout_marginStart="71dp"
         android:src="@drawable/dumbbell"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/Title" />
+        app:layout_constraintTop_toBottomOf="@+id/Title"
+        app:srcCompat="@drawable/benchpress"
+        tools:srcCompat="@drawable/benchpress" />
 
     <ImageView
         android:id="@+id/imageView3"
