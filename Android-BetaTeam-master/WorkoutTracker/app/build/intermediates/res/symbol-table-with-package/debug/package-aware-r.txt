@@ -697,6 +697,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addExercise
 id alertTitle
 id alignBounds
 id alignMargins
@@ -730,6 +731,7 @@ id direct
 id disableHome
 id edit_query
 id end
+id exerciseName
 id expand_activities_button
 id expanded_menu
 id fill
@@ -770,6 +772,7 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id numberOfReps
 id packed
 id parent
 id parentPanel
@@ -876,6 +879,7 @@ layout activity_one_rep_max
 layout activity_preacher_curl
 layout activity_squats
 layout activity_workout_journal
+layout journal_rows
 layout newrows
 layout notification_action
 layout notification_action_tombstone

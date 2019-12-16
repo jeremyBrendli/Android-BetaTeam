@@ -71,59 +71,12 @@ public class OneRepMax extends AppCompatActivity{
         TextView FirstOneRep = findViewById(R.id.OneRep);
         calculateOneRep(FirstWeight, FirstOneRep);
 
-            SharedPreferences day1 = this.getSharedPreferences("com.example.workouttracker", Context.MODE_PRIVATE);
-            SharedPreferences day2 = this.getSharedPreferences("com.example.workouttracker", Context.MODE_PRIVATE);
-            SharedPreferences day3 = this.getSharedPreferences("com.example.workouttracker", Context.MODE_PRIVATE);
-            SharedPreferences day4 = this.getSharedPreferences("com.example.workouttracker", Context.MODE_PRIVATE);
-            SharedPreferences day5 = this.getSharedPreferences("com.example.workouttracker", Context.MODE_PRIVATE);
-            SharedPreferences day6 = this.getSharedPreferences("com.example.workouttracker", Context.MODE_PRIVATE);
-            SharedPreferences day7 = this.getSharedPreferences("com.example.workouttracker", Context.MODE_PRIVATE);
+
 
             for (int i = 0; i < parentlinear.getChildCount() - 2; i++) {
                 final EditText weight = editTextList.get(i);
                 final TextView MAX = TextViewList.get(i);
                 calculateOneRep(weight, MAX);
-
-                try{
-                    if (i == 0) {
-                        String dummy = ObjectSerializer.serialize(new ArrayList<>());
-                        String serOneRep = day1.getString("One Rep Max", dummy);
-                        editTextList = (ArrayList<EditText>) ObjectSerializer.deserialize(serOneRep);
-                    }
-                    else if (i == 1){
-                        String dummy = ObjectSerializer.serialize(new ArrayList<>());
-                        String serOneRep = day2.getString("One Rep Max", dummy);
-                        editTextList = (ArrayList<EditText>) ObjectSerializer.deserialize(serOneRep);
-                    }
-                    else if (i == 2){
-                        String dummy = ObjectSerializer.serialize(new ArrayList<>());
-                        String serOneRep = day3.getString("One Rep Max", dummy);
-                        editTextList = (ArrayList<EditText>) ObjectSerializer.deserialize(serOneRep);
-                    }
-                    else if (i == 3){
-                        String dummy = ObjectSerializer.serialize(new ArrayList<>());
-                        String serOneRep = day4.getString("One Rep Max", dummy);
-                        editTextList = (ArrayList<EditText>) ObjectSerializer.deserialize(serOneRep);
-                    }
-                    else if (i == 4){
-                        String dummy = ObjectSerializer.serialize(new ArrayList<>());
-                        String serOneRep = day5.getString("One Rep Max", dummy);
-                        editTextList = (ArrayList<EditText>) ObjectSerializer.deserialize(serOneRep);
-                    }
-                    else if (i == 5){
-                        String dummy = ObjectSerializer.serialize(new ArrayList<>());
-                        String serOneRep = day6.getString("One Rep Max", dummy);
-                        editTextList = (ArrayList<EditText>) ObjectSerializer.deserialize(serOneRep);
-                    }
-                    else if (i == 6){
-                        String dummy = ObjectSerializer.serialize(new ArrayList<>());
-                        String serOneRep = day7.getString("One Rep Max", dummy);
-                        editTextList = (ArrayList<EditText>) ObjectSerializer.deserialize(serOneRep);
-                    }
-                }
-                catch(Exception e){
-                    e.printStackTrace();
-                }
             }
         }
         catch (Exception e){
