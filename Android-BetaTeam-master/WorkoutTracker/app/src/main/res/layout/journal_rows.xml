@@ -30,7 +30,7 @@
                 android:text="Exercise name:" />
 
             <EditText
-                android:id="@+id/weight"
+                android:id="@+id/weightET"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -60,6 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#4CAF50"
+                android:onClick="save"
                 android:text="Add Exercise" />
         </LinearLayout>
 

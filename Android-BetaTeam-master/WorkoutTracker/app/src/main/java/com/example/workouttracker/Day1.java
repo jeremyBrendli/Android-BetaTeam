@@ -22,7 +22,7 @@ import java.util.ArrayList;
 
 import static java.util.Arrays.asList;
 
-public class ExerciseExamples extends AppCompatActivity {
+public class Day1 extends AppCompatActivity {
 
     ListView listView;
     ArrayAdapter<String> workarray;

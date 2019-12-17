@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class PreacherCurl extends AppCompatActivity {
 
@@ -30,7 +29,7 @@ public class PreacherCurl extends AppCompatActivity {
         }
         if(view.getId() == R.id.Exercises){
 
-            Intent intent = new Intent(getApplicationContext(),ExerciseExamples.class);
+            Intent intent = new Intent(getApplicationContext(), Day1.class);
             startActivity(intent);
 
         }

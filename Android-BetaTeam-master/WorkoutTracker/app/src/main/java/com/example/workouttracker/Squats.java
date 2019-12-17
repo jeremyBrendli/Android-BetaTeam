@@ -21,7 +21,7 @@ public class Squats extends AppCompatActivity {
         }
         if(view.getId() == R.id.Exercises){
 
-            Intent intent = new Intent(getApplicationContext(),ExerciseExamples.class);
+            Intent intent = new Intent(getApplicationContext(), Day1.class);
             startActivity(intent);
 
         }

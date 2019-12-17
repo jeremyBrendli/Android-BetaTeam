@@ -6,14 +6,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +19,13 @@ public class WorkoutJournal extends AppCompatActivity {
     EditText name;
     EditText weight;
     EditText reps;
+    String workoutname;
+    String lbs;
+    String numberofreps;
     Button addExercise;
+    List<EditText> namelist = new ArrayList<EditText>();
+    List<EditText> weightlist = new ArrayList<EditText>();
+    List<EditText> repslsit = new ArrayList<EditText>();
     int newlinecount = 0;
     private LinearLayout parent;
 
@@ -33,15 +35,46 @@ public class WorkoutJournal extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_workout_journal);
+        setContentView(R.layout.Day1);
+        name  = findViewById(R.id.exerciseName);;
+        weight = findViewById(R.id.weightET);
+        reps = findViewById(R.id.numberOfReps);
 
         addExercise = findViewById(R.id.addExercise);
+
         Intent intent = new Intent();
-        workouts = this.getSharedPreferences("com.example.sharedpreferences", Context.MODE_PRIVATE);
+        workouts = this.getSharedPreferences("com.example.workouttracker", Context.MODE_PRIVATE);
+        try {
+            for (int i = 0; i < 6; i++) {
+
+                workoutname = workouts.getString("Workouts" + i, "Exercise Name");
+                lbs = workouts.getString("LBS" + i, "Weight");
+                numberofreps = workouts.getString("Reps" + i, "# Of Sets & Reps ");
+                String exerciseID = "exerciseName" + i;
+                String weightID = "weightET" + i;
+                String numberOfRepsID = "numberOfReps" +i;
+                int NameId = getResources().getIdentifier(exerciseID, "id", getPackageName());
+                int weightId = getResources().getIdentifier(weightID, "id", getPackageName());
+                int repsid = getResources().getIdentifier(numberOfRepsID, "id", getPackageName());
+                name = findViewById(NameId);
+                weight = findViewById(weightId);
+                reps = findViewById(repsid);
+               /* EditText nameET = namelist.get(i);
+                EditText weightET = weightlist.get(i);
+                EditText reptET = repslsit.get(i);
+                */
+                name.setText(workoutname);
+                weight.setText(lbs);
+                reps.setText(numberofreps);
+            }
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
 
     }
 
-    public void newLine(View view) {
+   /* public void newLine(View view) {
         newlinecount++;
         if (newlinecount < 9) {
             LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -55,5 +88,54 @@ public class WorkoutJournal extends AppCompatActivity {
             // store object in list
             textList.add(edittext);
         }
+
+    }*/
+    public void save(View view){
+        workouts = this.getSharedPreferences("com.example.workouttracker", Context.MODE_PRIVATE);
+        for(int i =0; i < 6;i++) {
+            String exerciseID = "exerciseName" + i;
+            String weightID = "weightET" + i;
+            String numberOfRepsID = "numberOfReps" +i;
+            int NameId = getResources().getIdentifier(exerciseID, "id", getPackageName());
+            int weightId = getResources().getIdentifier(weightID, "id", getPackageName());
+            int repsid = getResources().getIdentifier(numberOfRepsID, "id", getPackageName());
+            name = findViewById(NameId);
+            weight = findViewById(weightId);
+            reps = findViewById(repsid);
+            /*weightlist.add(weight);
+            namelist.add(name);
+            repslsit.add(reps);
+*/
+            //EditText nameET = namelist.get(i);
+            workoutname = name.getText().toString();
+
+            //EditText weightET = weightlist.get(i);
+            lbs =weight.getText().toString();
+
+            //EditText reptET = repslsit.get(i);
+            numberofreps = reps.getText().toString();
+
+            workouts.edit().putString("Workouts"+i, workoutname).apply();
+            workouts.edit().putString("LBS"+i, lbs).apply();
+            workouts.edit().putString("Reps"+i, numberofreps).apply();
+
+        }
+        /*for(int i = 0;i<6;i++) {
+
+            EditText nameET = namelist.get(i);
+            workoutname = nameET.getText().toString();
+
+            EditText weightET = weightlist.get(i);
+            lbs =weightET.getText().toString();
+
+            EditText reptET = repslsit.get(i);
+            numberofreps = reptET.getText().toString();
+
+            workouts.edit().putString("Workouts"+i, workoutname).apply();
+            workouts.edit().putString("LBS"+i, lbs).apply();
+            workouts.edit().putString("Reps"+i, numberofreps).apply();
+        }
+*/
+
     }
 }

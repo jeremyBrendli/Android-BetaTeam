@@ -1,40 +1,22 @@
 package com.example.workouttracker;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.TypedValue;
-import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.ViewGroup;
-import android.widget.LinearLayout.LayoutParams;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.webkit.WebView;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.List;
-
-import static android.view.View.generateViewId;
 
 public class OneRepMax extends AppCompatActivity{
 
@@ -63,7 +45,7 @@ public class OneRepMax extends AppCompatActivity{
     public void calculateUpper(View view){
         spiinnernum = 1;
         try {
-        EditText FirstWeight = findViewById(R.id.weight);
+        EditText FirstWeight = findViewById(R.id.weightET);
         TextView FirstOneRep = findViewById(R.id.OneRep);
         calculateOneRep(FirstWeight, FirstOneRep);
 
@@ -125,7 +107,7 @@ public class OneRepMax extends AppCompatActivity{
     public void calculateLower(View view){
         spiinnernum = 2;
         try {
-            EditText FirstWeight = findViewById(R.id.weight);
+            EditText FirstWeight = findViewById(R.id.weightET);
             TextView FirstOneRep = findViewById(R.id.OneRep);
             calculateOneRep(FirstWeight, FirstOneRep);
 
@@ -201,7 +183,7 @@ public class OneRepMax extends AppCompatActivity{
         }
         if (view.getId() == R.id.Exercises) {
 
-            Intent intent = new Intent(getApplicationContext(), ExerciseExamples.class);
+            Intent intent = new Intent(getApplicationContext(), Day1.class);
             startActivity(intent);
 
         }
