@@ -12,12 +12,13 @@
         android:layout_width="407dp"
         android:layout_height="333dp"
         android:layout_marginBottom="426dp"
+        android:src="@drawable/bench"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:srcCompat="@drawable/benchpress" />
+        tools:srcCompat="bench" />
 
     <Button
         android:id="@+id/Journal"

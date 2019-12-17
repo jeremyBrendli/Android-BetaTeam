@@ -4,28 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4DB051"
+    android:backgroundTint="@color/colorPrimary"
     tools:context=".PreacherCurl">
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="418dp"
-        android:layout_height="434dp"
-        android:layout_marginTop="8dp"
-        android:background="#3A833C"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/preacher_im"
-        app:srcCompat="@color/colorAccent" />
 
     <ImageView
         android:id="@+id/preacher_im"
         android:layout_width="412dp"
         android:layout_height="277dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginBottom="426dp"
+        android:src="@drawable/preacher"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:srcCompat="@drawable/maxresdefault" />
 
     <Button

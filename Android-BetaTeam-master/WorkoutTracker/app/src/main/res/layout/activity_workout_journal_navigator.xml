@@ -9,6 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#2397F3"
+        android:backgroundTint="@color/colorAccent"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,6 +21,7 @@
             android:id="@+id/Day1"
             android:layout_width="match_parent"
             android:layout_height="90dp"
+            android:backgroundTint="@color/colorPrimary"
             android:onClick="moveScrenes"
             android:text="Day 1" />
 
@@ -26,6 +29,7 @@
             android:id="@+id/Day2"
             android:layout_width="match_parent"
             android:layout_height="90dp"
+            android:backgroundTint="@color/colorPrimary"
             android:onClick="moveScrenes"
             android:text="Day 2" />
 
@@ -33,6 +37,7 @@
             android:id="@+id/day3"
             android:layout_width="match_parent"
             android:layout_height="90dp"
+            android:backgroundTint="@color/colorPrimary"
             android:onClick="moveScrenes"
             android:text="Day 3" />
 
@@ -40,6 +45,7 @@
             android:id="@+id/day4"
             android:layout_width="match_parent"
             android:layout_height="90dp"
+            android:backgroundTint="@color/colorPrimary"
             android:onClick="moveScrenes"
             android:text="Day 4" />
 
@@ -47,6 +53,7 @@
             android:id="@+id/day5"
             android:layout_width="match_parent"
             android:layout_height="90dp"
+            android:backgroundTint="@color/colorPrimary"
             android:onClick="moveScrenes"
             android:text="Day 5" />
 
@@ -54,6 +61,7 @@
             android:id="@+id/day6"
             android:layout_width="match_parent"
             android:layout_height="90dp"
+            android:backgroundTint="@color/colorPrimary"
             android:onClick="moveScrenes"
             android:text="Day 6" />
 
@@ -61,12 +69,15 @@
             android:id="@+id/day7"
             android:layout_width="match_parent"
             android:layout_height="90dp"
+            android:backgroundTint="@color/colorPrimary"
             android:onClick="moveScrenes"
             android:text="Day 7" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#2397F3"
+            android:backgroundTint="@color/colorAccent"
             android:orientation="horizontal">
 
             <Button
@@ -74,14 +85,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:backgroundTint="@color/colorPrimary"
                 android:onClick="moveScrenes"
                 android:text="One Rep Max" />
 
             <Button
-                android:id="@+id/Example Exercies"
+                android:id="@+id/Exercises"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:backgroundTint="@color/colorPrimary"
                 android:bufferType="normal"
                 android:onClick="moveScrenes"
                 android:text="Example Exercies"

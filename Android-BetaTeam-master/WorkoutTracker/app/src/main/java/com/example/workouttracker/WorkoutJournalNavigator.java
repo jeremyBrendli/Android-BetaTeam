@@ -21,7 +21,7 @@ public class WorkoutJournalNavigator extends AppCompatActivity {
         }
         if(view.getId() == R.id.Exercises){
 
-            Intent intent = new Intent(getApplicationContext(), Day1.class);
+            Intent intent = new Intent(getApplicationContext(), ExampleExercises.class);
             startActivity(intent);
 
         }
@@ -32,7 +32,7 @@ public class WorkoutJournalNavigator extends AppCompatActivity {
 
         }if(view.getId() == R.id.Day1){
 
-            Intent intent = new Intent(getApplicationContext(),Day1.class);
+            Intent intent = new Intent(getApplicationContext(), WorkoutJournal.class);
             startActivity(intent);
 
         }if(view.getId() == R.id.Day2){

@@ -183,13 +183,13 @@ public class OneRepMax extends AppCompatActivity{
         }
         if (view.getId() == R.id.Exercises) {
 
-            Intent intent = new Intent(getApplicationContext(), Day1.class);
+            Intent intent = new Intent(getApplicationContext(), ExampleExercises.class);
             startActivity(intent);
 
         }
         if (view.getId() == R.id.Journal) {
 
-            Intent intent = new Intent(getApplicationContext(), WorkoutJournal.class);
+            Intent intent = new Intent(getApplicationContext(), WorkoutJournalNavigator.class);
             startActivity(intent);
 
         }

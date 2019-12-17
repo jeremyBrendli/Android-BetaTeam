@@ -111,10 +111,10 @@ activity#com.example.workouttracker.PreacherCurl
 ADDED from D:\Fall 2019\Android Project\Android-BetaTeam\Android-BetaTeam\Android-BetaTeam-master\WorkoutTracker\app\src\main\AndroidManifest.xml:21:9-50
 	android:name
 		ADDED from D:\Fall 2019\Android Project\Android-BetaTeam\Android-BetaTeam\Android-BetaTeam-master\WorkoutTracker\app\src\main\AndroidManifest.xml:21:19-47
-activity#com.example.workouttracker.Day1
-ADDED from D:\Fall 2019\Android Project\Android-BetaTeam\Android-BetaTeam\Android-BetaTeam-master\WorkoutTracker\app\src\main\AndroidManifest.xml:22:9-42
+activity#com.example.workouttracker.ExampleExercises
+ADDED from D:\Fall 2019\Android Project\Android-BetaTeam\Android-BetaTeam\Android-BetaTeam-master\WorkoutTracker\app\src\main\AndroidManifest.xml:22:9-54
 	android:name
-		ADDED from D:\Fall 2019\Android Project\Android-BetaTeam\Android-BetaTeam\Android-BetaTeam-master\WorkoutTracker\app\src\main\AndroidManifest.xml:22:19-39
+		ADDED from D:\Fall 2019\Android Project\Android-BetaTeam\Android-BetaTeam\Android-BetaTeam-master\WorkoutTracker\app\src\main\AndroidManifest.xml:22:19-51
 activity#com.example.workouttracker.WorkoutJournal
 ADDED from D:\Fall 2019\Android Project\Android-BetaTeam\Android-BetaTeam\Android-BetaTeam-master\WorkoutTracker\app\src\main\AndroidManifest.xml:23:9-52
 	android:name

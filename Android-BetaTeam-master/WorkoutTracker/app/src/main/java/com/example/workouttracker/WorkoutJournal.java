@@ -35,7 +35,7 @@ public class WorkoutJournal extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.Day1);
+        setContentView(R.layout.activity_workout_journal);
         name  = findViewById(R.id.exerciseName);;
         weight = findViewById(R.id.weightET);
         reps = findViewById(R.id.numberOfReps);
@@ -51,7 +51,7 @@ public class WorkoutJournal extends AppCompatActivity {
                 lbs = workouts.getString("LBS" + i, "Weight");
                 numberofreps = workouts.getString("Reps" + i, "# Of Sets & Reps ");
                 String exerciseID = "exerciseName" + i;
-                String weightID = "weightET" + i;
+                String weightID = "weight" + i;
                 String numberOfRepsID = "numberOfReps" +i;
                 int NameId = getResources().getIdentifier(exerciseID, "id", getPackageName());
                 int weightId = getResources().getIdentifier(weightID, "id", getPackageName());
@@ -94,7 +94,7 @@ public class WorkoutJournal extends AppCompatActivity {
         workouts = this.getSharedPreferences("com.example.workouttracker", Context.MODE_PRIVATE);
         for(int i =0; i < 6;i++) {
             String exerciseID = "exerciseName" + i;
-            String weightID = "weightET" + i;
+            String weightID = "weight" + i;
             String numberOfRepsID = "numberOfReps" +i;
             int NameId = getResources().getIdentifier(exerciseID, "id", getPackageName());
             int weightId = getResources().getIdentifier(weightID, "id", getPackageName());
@@ -110,7 +110,7 @@ public class WorkoutJournal extends AppCompatActivity {
             workoutname = name.getText().toString();
 
             //EditText weightET = weightlist.get(i);
-            lbs =weight.getText().toString();
+            lbs = weight.getText().toString();
 
             //EditText reptET = repslsit.get(i);
             numberofreps = reps.getText().toString();
@@ -137,5 +137,24 @@ public class WorkoutJournal extends AppCompatActivity {
         }
 */
 
+    }
+    public void moveScrenes(View view){
+        if(view.getId() == R.id.OneRep){
+            Intent intent = new Intent(getApplicationContext(),OneRepMax.class);
+            startActivity(intent);
+
+        }
+        if(view.getId() == R.id.Exercises){
+
+            Intent intent = new Intent(getApplicationContext(), ExampleExercises.class);
+            startActivity(intent);
+
+        }
+        if(view.getId() == R.id.Journal){
+
+            Intent intent = new Intent(getApplicationContext(),WorkoutJournalNavigator.class);
+            startActivity(intent);
+
+        }
     }
 }

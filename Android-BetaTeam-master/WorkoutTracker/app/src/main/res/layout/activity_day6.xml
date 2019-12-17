@@ -4,6 +4,293 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Day6">
+    tools:context=".WorkoutJournal">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3A833C"
+        android:backgroundTint="@color/colorAccent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="285dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/exerciseName30"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:backgroundTint="@color/colorPrimary"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Exercise name:" />
+
+            <EditText
+                android:id="@+id/weight30"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorPrimary"
+                android:ems="10"
+                android:inputType="number"
+                android:text="Weight:" />
+
+            <EditText
+                android:id="@+id/numberOfReps30"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:backgroundTint="@color/colorPrimary"
+                android:ems="10"
+                android:inputType="number"
+                android:text="# of Reps" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/exerciseName31"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:backgroundTint="@color/colorPrimary"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Exercise name:" />
+
+            <EditText
+                android:id="@+id/weight31"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorPrimary"
+                android:ems="10"
+                android:inputType="number"
+                android:text="Weight:" />
+
+            <EditText
+                android:id="@+id/numberOfReps31"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:backgroundTint="@color/colorPrimary"
+                android:ems="10"
+                android:inputType="number"
+                android:text="# of Reps" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/exerciseName32"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:backgroundTint="@color/colorPrimary"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Exercise name:" />
+
+            <EditText
+                android:id="@+id/weight32"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorPrimary"
+                android:ems="10"
+                android:inputType="number"
+                android:text="Weight:" />
+
+            <EditText
+                android:id="@+id/numberOfReps32"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:backgroundTint="@color/colorPrimary"
+                android:ems="10"
+                android:inputType="number"
+                android:text="# of Reps" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/exerciseName33"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:backgroundTint="@color/colorPrimary"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Exercise name:" />
+
+            <EditText
+                android:id="@+id/weight33"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorPrimary"
+                android:ems="10"
+                android:inputType="number"
+                android:text="Weight:" />
+
+            <EditText
+                android:id="@+id/numberOfReps33"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:backgroundTint="@color/colorPrimary"
+                android:ems="10"
+                android:inputType="number"
+                android:text="# of Reps" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/exerciseName34"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:backgroundTint="@color/colorPrimary"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Exercise name:" />
+
+            <EditText
+                android:id="@+id/weight34"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorPrimary"
+                android:ems="10"
+                android:inputType="number"
+                android:text="Weight:" />
+
+            <EditText
+                android:id="@+id/numberOfReps34"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:backgroundTint="@color/colorPrimary"
+                android:ems="10"
+                android:inputType="number"
+                android:text="# of Reps" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/exerciseName35"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:backgroundTint="@color/colorPrimary"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Exercise name:" />
+
+            <EditText
+                android:id="@+id/weight35"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorPrimary"
+                android:ems="10"
+                android:inputType="number"
+                android:text="Weight:" />
+
+            <EditText
+                android:id="@+id/numberOfReps35"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:backgroundTint="@color/colorPrimary"
+                android:ems="10"
+                android:inputType="number"
+                android:text="# of Reps" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/addExercise"
+                android:layout_width="53dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#4CAF50"
+                android:onClick="save"
+                android:text="Save" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/OneRep"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorPrimary"
+                android:onClick="moveScrenes"
+                android:text="One Rep Max" />
+
+            <Button
+                android:id="@+id/Exercises"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorPrimary"
+                android:bufferType="normal"
+                android:onClick="moveScrenes"
+                android:text="Example Exercies"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
