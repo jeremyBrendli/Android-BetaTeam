@@ -28,6 +28,7 @@ public class WorkoutJournal extends AppCompatActivity {
     private LinearLayout parent;
 
     List<EditText> textList = new ArrayList<>();
+    SharedPreferences workouts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,7 @@ public class WorkoutJournal extends AppCompatActivity {
 
         addExercise = findViewById(R.id.addExercise);
         Intent intent = new Intent();
+        workouts = this.getSharedPreferences("com.example.sharedpreferences", Context.MODE_PRIVATE);
 
     }
 
