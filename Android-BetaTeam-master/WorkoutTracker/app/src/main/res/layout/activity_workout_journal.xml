@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WorkoutJournal" >
+    tools:context=".WorkoutJournal">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#3A833C"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="74dp"
         tools:layout_editor_absoluteY="285dp">
@@ -16,6 +17,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="63dp"
+            android:background="@color/colorAccent"
             android:orientation="horizontal">
 
             <EditText
@@ -51,6 +53,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="79dp"
+            android:background="@color/colorAccent"
             android:orientation="horizontal">
 
             <Button

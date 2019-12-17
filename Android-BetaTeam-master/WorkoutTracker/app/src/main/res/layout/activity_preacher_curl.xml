@@ -7,6 +7,16 @@
     tools:context=".PreacherCurl">
 
     <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="418dp"
+        android:layout_height="434dp"
+        android:layout_marginTop="8dp"
+        android:background="#3A833C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/preacher_im"
+        app:srcCompat="@color/colorAccent" />
+
+    <ImageView
         android:id="@+id/preacher_im"
         android:layout_width="412dp"
         android:layout_height="277dp"
